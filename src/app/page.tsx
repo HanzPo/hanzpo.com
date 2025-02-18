@@ -23,7 +23,13 @@ export default function Home() {
             <div className="p-2 md:p-3 flex items-center justify-between">
               <div className="flex items-center">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
-                  
+                  <Image 
+                    src="/images/shopify_glyph.svg" 
+                    alt="Shopify logo" 
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="font-medium text-sm md:text-base text-stone-200">Shopify</h3>
