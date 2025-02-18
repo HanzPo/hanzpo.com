@@ -13,6 +13,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hanzpo.com'),
   title: "hanz po",
   description: "hanz's personal website",
   openGraph: {

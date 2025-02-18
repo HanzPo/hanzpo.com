@@ -16,4 +16,7 @@ body {
   background-position: center;
 }
 
-
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  display: none;
+}
