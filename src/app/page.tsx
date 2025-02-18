@@ -3,6 +3,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div>
+      <Image src="/opengraph-image.png" alt="Site preview image" width={0} height={0} />
       <div className="min-h-screen flex items-center">
         <div className="w-full px-4 md:px-0 md:ml-[10%] lg:ml-[20%] mt-8 md:-mt-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-crimson-pro mb-4 text-center md:text-left">
@@ -22,13 +23,7 @@ export default function Home() {
             <div className="p-2 md:p-3 flex items-center justify-between">
               <div className="flex items-center">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
-                  <Image 
-                    src="/images/shopify_glyph.svg" 
-                    alt="Shopify logo" 
-                    width={48}
-                    height={48}
-                    className="w-full h-full object-contain"
-                  />
+                  
                 </div>
                 <div>
                   <h3 className="font-medium text-sm md:text-base text-stone-200">Shopify</h3>
