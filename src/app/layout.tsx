@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "hanz po",
     images: [
       {
-        url: "/images/og-image.svg",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "hanz po",
