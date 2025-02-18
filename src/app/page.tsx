@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div>
-      <Image src="/opengraph-image.png" alt="Site preview image" width={0} height={0} />
+      <Image src="/opengraph-image.png" alt="Opengraph preview image" width={1200} height={630} />
       <div className="min-h-screen flex items-center">
         <div className="w-full px-4 md:px-0 md:ml-[10%] lg:ml-[20%] mt-8 md:-mt-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-crimson-pro mb-4 text-center md:text-left">
