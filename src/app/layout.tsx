@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     url: "https://hanzpo.com",
     siteName: "hanz po",
     images: "/opengraph-image.png",
+    type: "website",
   },
   twitter: {
     images: "/opengraph-image.png",
