@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Crimson_Pro, Lora } from 'next/font/google';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const crimsonPro = Crimson_Pro({ 
   subsets: ['latin'],
   variable: '--font-crimson-pro',
@@ -14,8 +13,24 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Hanz Po",
-  description: "Hanz Po's personal website",
+  title: "hanz po",
+  description: "hanz's personal website",
+  openGraph: {
+    title: "hanz po",
+    description: "hanz's personal website",
+    url: "https://hanzpo.com",
+    siteName: "hanz po",
+    images: [
+      {
+        url: "/images/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "hanz po",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
