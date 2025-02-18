@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ogImage from './opengraph-image.png'
 import { Crimson_Pro, Lora } from 'next/font/google';
 
 const crimsonPro = Crimson_Pro({ 
@@ -22,14 +23,20 @@ export const metadata: Metadata = {
     siteName: "hanz po",
     images: [
       {
-        url: "/images/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "hanz po",
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height
       },
     ],
-    locale: "en_US",
-    type: "website",
+  },
+  twitter: {
+    images: [
+      {
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height
+      },
+    ]
   },
 };
 
