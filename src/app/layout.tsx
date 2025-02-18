@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import ogImage from '../../public/opengraph-image.png'
 import { Crimson_Pro, Lora } from 'next/font/google';
 
 const crimsonPro = Crimson_Pro({ 
