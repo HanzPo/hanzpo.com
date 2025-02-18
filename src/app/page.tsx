@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <Image src="/opengraph-image.png" alt="Site preview image" width={0} height={0} />
-      <div className="min-h-screen flex items-center">
+      <div className="min-h-screen flex items-start md:items-center pt-16 md:pt-0">
         <div className="w-full px-4 md:px-0 md:ml-[10%] lg:ml-[20%] mt-8 md:-mt-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-crimson-pro mb-4 text-center md:text-left">
             hey, i&apos;m hanz.
