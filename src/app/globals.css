@@ -11,8 +11,7 @@ body {
 }
 
 .background-image {
-  background-image: url('/images/background.png');
-  background-size: cover;
+  background-color: #221F18;
   background-position: center;
 }
 
