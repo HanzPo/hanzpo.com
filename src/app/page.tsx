@@ -11,7 +11,7 @@ export default function Home() {
           </h1>
           
           <p className="text-lg md:text-xl font-crimson-pro mb-8 text-stone-300 text-center md:text-left max-w-lg">
-            i&apos;m a computer science student at the university of waterloo with an interest in data science and machine learning. i also enjoy learning about finance, economics, urban planning, and history in my spare time.
+            i&apos;m a computer science student at the university of waterloo with an interest in machine learning. i also enjoy learning about finance, urban planning, and languages in my spare time.
           </p>
           
           <h2 className="text-xl md:text-2xl font-crimson-pro mb-3 text-stone-200 text-center md:text-left">
@@ -103,12 +103,12 @@ export default function Home() {
           </h2>
           <div className="space-y-3 font-lora">
             <a 
-              href="/files/Resume___January_2025_V6.pdf" 
+              href="/files/Resume___June_2025.pdf" 
               className="block text-stone-400 text-lg md:text-xl hover:text-stone-200 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Resume
+              resume
             </a>
             <a 
               href="https://www.github.com/HanzPo" 
@@ -116,7 +116,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub
+              github
             </a>
             <a 
               href="https://www.linkedin.com/in/hanznathanpo/" 
@@ -124,7 +124,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              linkedin
             </a>
             <a 
               href="https://x.com/hanznathanpo" 
@@ -132,7 +132,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Twitter
+              twitter
             </a>
             <a 
               href="https://www.instagram.com/hanznathanpo" 
@@ -140,7 +140,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Instagram
+              instagram
             </a>
           </div>
         </div>
