@@ -33,7 +33,7 @@ export default function Home() {
   useEffect(() => {
     let rafId = 0;
     const update = () => {
-      const y = window.scrollY * 0.25;
+      const y = window.scrollY * -0.25;
       document.documentElement.style.setProperty('--bg-offset-y', `${y}px`);
     };
     const onScroll = () => {
