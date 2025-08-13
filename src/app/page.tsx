@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion, type Variants } from 'framer-motion';
+import { useEffect } from 'react';
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -29,6 +30,28 @@ const itemUp: Variants = {
 };
 
 export default function Home() {
+  useEffect(() => {
+    let rafId = 0;
+    const update = () => {
+      const y = window.scrollY * 0.25;
+      document.documentElement.style.setProperty('--bg-offset-y', `${y}px`);
+    };
+    const onScroll = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        update();
+        rafId = 0;
+      });
+    };
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+    };
+  }, []);
   return (
     <motion.div initial="hidden" animate="visible" variants={container}>
       <Image src="/opengraph-image.png" alt="Site preview image" width={0} height={0} />
