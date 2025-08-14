@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${crimsonPro.className} ${lora.className} background-image text-gray-200`}>
+      <body className={`${crimsonPro.className} ${lora.className} background-image text-gray-200 lowercase`}>
         {children}
       </body>
     </html>
