@@ -54,7 +54,7 @@ export default function Home() {
   }, []);
   return (
     <motion.div initial="hidden" animate="visible" variants={container}>
-      <Image src="/opengraph-image.png" alt="Site preview image" width={0} height={0} />
+      <Image src="/opengraph-image.png" alt="site preview image" width={0} height={0} />
       <div className="min-h-screen flex items-start md:items-center pt-16 md:pt-0">
         <div className="w-full px-4 md:px-0 md:ml-[10%] lg:ml-[20%] mt-8 md:-mt-10">
           <motion.h1 variants={itemUp} className="text-4xl md:text-5xl lg:text-6xl font-crimson-pro mb-4 text-center md:text-left">
@@ -74,20 +74,20 @@ export default function Home() {
             <motion.div variants={itemUp} className="p-2 md:p-3 flex items-center justify-between">
               <div className="flex items-center">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
-                  <Image
-                    src="/images/shopify_glyph.svg"
-                    alt="Shopify logo"
-                    width={48}
-                    height={48}
-                    className="w-full h-full object-contain"
-                  />
+                   <Image
+                     src="/images/shopify_glyph.svg"
+                     alt="shopify logo"
+                     width={48}
+                     height={48}
+                     className="w-full h-full object-contain"
+                   />
                 </div>
                 <div>
-                  <h3 className="font-medium text-sm md:text-base text-stone-200">Shopify</h3>
-                  <p className="text-stone-400 text-sm md:text-base">Engineering Intern</p>
+                  <h3 className="font-medium text-sm md:text-base text-stone-200">shopify</h3>
+                  <p className="text-stone-400 text-sm md:text-base">engineering intern</p>
                 </div>
               </div>
-              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">May 2025 - Present</div>
+              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">may 2025 - present</div>
             </motion.div>
 
             {/* Work Experience Card 2 */}
@@ -96,15 +96,15 @@ export default function Home() {
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
                   <Image
                     src="/images/cohere_logo.svg"
-                    alt="Cohere logo"
+                    alt="cohere logo"
                     width={48}
                     height={48}
                     className="w-full h-full object-contain"
                   />
                 </div>
                 <div>
-                  <h3 className="font-medium text-sm md:text-base text-stone-200">Cohere</h3>
-                  <p className="text-stone-400 text-sm md:text-base">Senior Data Quality Specialist</p>
+                  <h3 className="font-medium text-sm md:text-base text-stone-200">cohere</h3>
+                  <p className="text-stone-400 text-sm md:text-base">senior data quality specialist</p>
                 </div>
               </div>
               <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - present</div>
@@ -115,15 +115,15 @@ export default function Home() {
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
                   <Image
                     src="/images/uw_logo.svg"
-                    alt="University of Waterloo logo"
+                    alt="university of waterloo logo"
                     width={48}
                     height={48}
                     className="w-full h-full object-contain"
                   />
                 </div>
                 <div>
-                  <h3 className="font-medium text-sm md:text-base text-stone-200">University of Waterloo</h3>
-                  <p className="text-stone-400 text-sm md:text-base">Bachelor of Computer Science</p>
+                  <h3 className="font-medium text-sm md:text-base text-stone-200">university of waterloo</h3>
+                  <p className="text-stone-400 text-sm md:text-base">bachelor of computer science</p>
                 </div>
               </div>
               <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - apr 2029</div>
