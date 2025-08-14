@@ -107,7 +107,7 @@ export default function Home() {
                   <p className="text-stone-400 text-sm md:text-base">Senior Data Quality Specialist</p>
                 </div>
               </div>
-              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">Sept. 2024 - Present</div>
+              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - present</div>
             </motion.div>
 
             <motion.div variants={itemUp} className="p-2 md:p-3 flex items-center justify-between">
@@ -126,7 +126,7 @@ export default function Home() {
                   <p className="text-stone-400 text-sm md:text-base">Bachelor of Computer Science</p>
                 </div>
               </div>
-              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">Sept. 2024 - Apr. 2029</div>
+              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - apr 2029</div>
             </motion.div>
           </motion.div>
 
