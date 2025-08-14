@@ -87,7 +87,7 @@ export default function Home() {
                   <p className="text-stone-400 text-sm md:text-base">Engineering Intern</p>
                 </div>
               </div>
-              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">Incoming S25</div>
+              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">May 2025 - Present</div>
             </motion.div>
 
             {/* Work Experience Card 2 */}
