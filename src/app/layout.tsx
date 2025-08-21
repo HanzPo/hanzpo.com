@@ -15,10 +15,10 @@ const lora = Lora({
 export const metadata: Metadata = {
   metadataBase: new URL('https://hanzpo.com'),
   title: "hanz po",
-  description: "hanz's personal website",
+  description: "hey, i'm hanz",
   openGraph: {
     title: "hanz po",
-    description: "hanz's personal website",
+    description: "hey, i'm hanz",
     url: "https://hanzpo.com",
     siteName: "hanz po",
     images: "/opengraph-image.png",

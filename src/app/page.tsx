@@ -66,7 +66,7 @@ export default function Home() {
           </motion.p>
 
           <motion.h2 variants={itemUp} className="text-xl md:text-2xl font-crimson-pro mb-3 text-stone-200 text-center md:text-left">
-            current roles:
+            recent roles:
           </motion.h2>
 
           <motion.div variants={listContainer} className="space-y-2 w-full md:w-[400px] lg:w-[500px] mx-auto md:mx-0 font-lora">
@@ -87,7 +87,7 @@ export default function Home() {
                   <p className="text-stone-400 text-sm md:text-base">engineering intern</p>
                 </div>
               </div>
-              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">may 2025 - present</div>
+              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">may 2025 - aug 2025</div>
             </motion.div>
 
             {/* Work Experience Card 2 */}
@@ -126,7 +126,7 @@ export default function Home() {
                   <p className="text-stone-400 text-sm md:text-base">bachelor of computer science</p>
                 </div>
               </div>
-              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - apr 2029</div>
+              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - present</div>
             </motion.div>
           </motion.div>
 
