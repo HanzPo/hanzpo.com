@@ -1,8 +1,8 @@
 "use client";
 
 import Image from 'next/image';
-import { motion, type Variants } from 'framer-motion';
-import { useEffect } from 'react';
+import { motion, type Variants, AnimatePresence } from 'framer-motion';
+import { useEffect, useState, useCallback } from 'react';
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -30,6 +30,21 @@ const itemUp: Variants = {
 };
 
 export default function Home() {
+  const [selectedRole, setSelectedRole] = useState<null | 'shopify' | 'cohere' | 'uw'>(null);
+
+  const closeModal = useCallback(() => setSelectedRole(null), []);
+
+  useEffect(() => {
+    if (!selectedRole) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [selectedRole, closeModal]);
+
   useEffect(() => {
     let rafId = 0;
     const update = () => {
@@ -71,7 +86,13 @@ export default function Home() {
 
           <motion.div variants={listContainer} className="space-y-2 w-full md:w-[400px] lg:w-[500px] mx-auto md:mx-0 font-lora">
             {/* Work Experience Card 1 */}
-            <motion.div variants={itemUp} className="p-2 md:p-3 flex items-center justify-between">
+            <motion.div
+              variants={itemUp}
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              className="p-2 md:p-3 flex items-center justify-between rounded-xl border border-white/10 hover:border-white/20 transition-colors cursor-pointer backdrop-blur-[1px]"
+              onClick={() => setSelectedRole('shopify')}
+            >
               <div className="flex items-center">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
                    <Image
@@ -91,7 +112,13 @@ export default function Home() {
             </motion.div>
 
             {/* Work Experience Card 2 */}
-            <motion.div variants={itemUp} className="p-2 md:p-3 flex items-center justify-between">
+            <motion.div
+              variants={itemUp}
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              className="p-2 md:p-3 flex items-center justify-between rounded-xl border border-white/10 hover:border-white/20 transition-colors cursor-pointer backdrop-blur-[1px]"
+              onClick={() => setSelectedRole('cohere')}
+            >
               <div className="flex items-center">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
                   <Image
@@ -110,7 +137,13 @@ export default function Home() {
               <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - present</div>
             </motion.div>
 
-            <motion.div variants={itemUp} className="p-2 md:p-3 flex items-center justify-between">
+            <motion.div
+              variants={itemUp}
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              className="p-2 md:p-3 flex items-center justify-between rounded-xl border border-white/10 hover:border-white/20 transition-colors cursor-pointer backdrop-blur-[1px]"
+              onClick={() => setSelectedRole('uw')}
+            >
               <div className="flex items-center">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
                   <Image
@@ -208,6 +241,87 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
+      <AnimatePresence>
+        {selectedRole && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <div className="absolute inset-0 bg-black/60" onClick={closeModal} />
+            <motion.div
+              role="dialog"
+              aria-modal="true"
+              className="relative z-10 w-full max-w-lg rounded-2xl border border-white/10 bg-stone-900/80 backdrop-blur-xl p-5 shadow-2xl text-stone-200"
+              initial={{ scale: 0.96, opacity: 0, y: 8 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.98, opacity: 0, y: 8 }}
+            >
+              <button
+                onClick={closeModal}
+                aria-label="Close"
+                className="absolute right-3 top-3 rounded-md p-1.5 text-stone-400 hover:text-stone-200 hover:bg-white/5 transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              {selectedRole === 'shopify' && (
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-white/90 rounded-lg p-2 flex items-center justify-center">
+                      <Image src="/images/shopify_glyph.svg" alt="shopify logo" width={40} height={40} className="w-full h-full object-contain" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium">shopify — engineering intern</h3>
+                      <p className="text-sm text-stone-400">may 2025 - aug 2025</p>
+                    </div>
+                  </div>
+                  <p className="text-stone-300 text-sm md:text-base">
+                    incoming summer 2025. more details coming soon.
+                  </p>
+                </div>
+              )}
+
+              {selectedRole === 'cohere' && (
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-white/90 rounded-lg p-2 flex items-center justify-center">
+                      <Image src="/images/cohere_logo.svg" alt="cohere logo" width={40} height={40} className="w-full h-full object-contain" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium">cohere — senior data quality specialist</h3>
+                      <p className="text-sm text-stone-400">sept 2024 - present</p>
+                    </div>
+                  </div>
+                  <p className="text-stone-300 text-sm md:text-base">
+                    working on data quality and evaluation for language models.
+                  </p>
+                </div>
+              )}
+
+              {selectedRole === 'uw' && (
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-white/90 rounded-lg p-2 flex items-center justify-center">
+                      <Image src="/images/uw_logo.svg" alt="university of waterloo logo" width={40} height={40} className="w-full h-full object-contain" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium">university of waterloo — b.cs.</h3>
+                      <p className="text-sm text-stone-400">sept 2024 - present</p>
+                    </div>
+                  </div>
+                  <p className="text-stone-300 text-sm md:text-base">
+                    pursuing a bachelor of computer science.
+                  </p>
+                </div>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }
