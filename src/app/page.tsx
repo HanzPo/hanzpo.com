@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion, type Variants } from 'framer-motion';
+import { useEffect } from 'react';
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -29,9 +30,31 @@ const itemUp: Variants = {
 };
 
 export default function Home() {
+  useEffect(() => {
+    let rafId = 0;
+    const update = () => {
+      const y = window.scrollY * -0.25;
+      document.documentElement.style.setProperty('--bg-offset-y', `${y}px`);
+    };
+    const onScroll = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        update();
+        rafId = 0;
+      });
+    };
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+    };
+  }, []);
   return (
     <motion.div initial="hidden" animate="visible" variants={container}>
-      <Image src="/opengraph-image.png" alt="Site preview image" width={0} height={0} />
+      <Image src="/opengraph-image.png" alt="site preview image" width={0} height={0} />
       <div className="min-h-screen flex items-start md:items-center pt-16 md:pt-0">
         <div className="w-full px-4 md:px-0 md:ml-[10%] lg:ml-[20%] mt-8 md:-mt-10">
           <motion.h1 variants={itemUp} className="text-4xl md:text-5xl lg:text-6xl font-crimson-pro mb-4 text-center md:text-left">
@@ -43,7 +66,7 @@ export default function Home() {
           </motion.p>
 
           <motion.h2 variants={itemUp} className="text-xl md:text-2xl font-crimson-pro mb-3 text-stone-200 text-center md:text-left">
-            current roles:
+            recent roles:
           </motion.h2>
 
           <motion.div variants={listContainer} className="space-y-2 w-full md:w-[400px] lg:w-[500px] mx-auto md:mx-0 font-lora">
@@ -51,20 +74,20 @@ export default function Home() {
             <motion.div variants={itemUp} className="p-2 md:p-3 flex items-center justify-between">
               <div className="flex items-center">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
-                  <Image
-                    src="/images/shopify_glyph.svg"
-                    alt="Shopify logo"
-                    width={48}
-                    height={48}
-                    className="w-full h-full object-contain"
-                  />
+                   <Image
+                     src="/images/shopify_glyph.svg"
+                     alt="shopify logo"
+                     width={48}
+                     height={48}
+                     className="w-full h-full object-contain"
+                   />
                 </div>
                 <div>
-                  <h3 className="font-medium text-sm md:text-base text-stone-200">Shopify</h3>
-                  <p className="text-stone-400 text-sm md:text-base">Engineering Intern</p>
+                  <h3 className="font-medium text-sm md:text-base text-stone-200">shopify</h3>
+                  <p className="text-stone-400 text-sm md:text-base">engineering intern</p>
                 </div>
               </div>
-              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">Incoming S25</div>
+              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">may 2025 - aug 2025</div>
             </motion.div>
 
             {/* Work Experience Card 2 */}
@@ -73,18 +96,18 @@ export default function Home() {
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
                   <Image
                     src="/images/cohere_logo.svg"
-                    alt="Cohere logo"
+                    alt="cohere logo"
                     width={48}
                     height={48}
                     className="w-full h-full object-contain"
                   />
                 </div>
                 <div>
-                  <h3 className="font-medium text-sm md:text-base text-stone-200">Cohere</h3>
-                  <p className="text-stone-400 text-sm md:text-base">Senior Data Quality Specialist</p>
+                  <h3 className="font-medium text-sm md:text-base text-stone-200">cohere</h3>
+                  <p className="text-stone-400 text-sm md:text-base">senior data quality specialist</p>
                 </div>
               </div>
-              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">Sept. 2024 - Present</div>
+              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - present</div>
             </motion.div>
 
             <motion.div variants={itemUp} className="p-2 md:p-3 flex items-center justify-between">
@@ -92,18 +115,18 @@ export default function Home() {
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
                   <Image
                     src="/images/uw_logo.svg"
-                    alt="University of Waterloo logo"
+                    alt="university of waterloo logo"
                     width={48}
                     height={48}
                     className="w-full h-full object-contain"
                   />
                 </div>
                 <div>
-                  <h3 className="font-medium text-sm md:text-base text-stone-200">University of Waterloo</h3>
-                  <p className="text-stone-400 text-sm md:text-base">Bachelor of Computer Science</p>
+                  <h3 className="font-medium text-sm md:text-base text-stone-200">university of waterloo</h3>
+                  <p className="text-stone-400 text-sm md:text-base">bachelor of computer science</p>
                 </div>
               </div>
-              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">Sept. 2024 - Apr. 2029</div>
+              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - present</div>
             </motion.div>
           </motion.div>
 
