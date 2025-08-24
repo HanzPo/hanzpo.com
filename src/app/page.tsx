@@ -280,7 +280,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-stone-300 text-sm md:text-base">
-                    incoming summer 2025. more details coming soon.
+                    wrote mostly ruby code to streamline checkouts for merchants and retail customers. i also used gRPC and GraphQL a lot to connect everything together.
                   </p>
                 </div>
               )}
@@ -297,7 +297,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-stone-300 text-sm md:text-base">
-                    working on data quality and evaluation for language models.
+                    working on data quality and evaluation for language models on coding tasks.
                   </p>
                 </div>
               )}
@@ -314,7 +314,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-stone-300 text-sm md:text-base">
-                    pursuing a bachelor of computer science.
+                    writing a lot of programs, proofs, and essays.
                   </p>
                 </div>
               )}
