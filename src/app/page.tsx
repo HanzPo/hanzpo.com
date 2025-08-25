@@ -280,7 +280,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-stone-300 text-sm md:text-base">
-                    wrote mostly ruby code to streamline checkouts for merchants and retail customers. i also used gRPC and GraphQL to connect everything together and made some fancy grafana dashboards to keep track of everything.
+                    wrote mostly ruby code to streamline checkouts for retail merchants and customers. i used gRPC and GraphQL to connect things together and made fancy grafana dashboards to keep track of everything.
                   </p>
                 </div>
               )}
