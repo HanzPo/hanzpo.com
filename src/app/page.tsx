@@ -309,7 +309,7 @@ export default function Home() {
                       <Image src="/images/uw_logo.svg" alt="university of waterloo logo" width={40} height={40} className="w-full h-full object-contain" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium">university of waterloo — b.cs.</h3>
+                      <h3 className="text-lg font-medium">university of waterloo — bachelor of computer science</h3>
                       <p className="text-sm text-stone-400">sept 2024 - present</p>
                     </div>
                   </div>
