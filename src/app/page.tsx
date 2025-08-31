@@ -293,7 +293,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-lg font-medium">cohere — senior data quality specialist</h3>
-                      <p className="text-sm text-stone-400">sept 2024 - present</p>
+                      <p className="text-sm text-stone-400">sept 2024 - aug 2025</p>
                     </div>
                   </div>
                   <p className="text-stone-300 text-sm md:text-base">
