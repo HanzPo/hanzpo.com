@@ -195,7 +195,7 @@ export default function Home() {
           <motion.div variants={listContainer} className="space-y-3 font-lora">
             <motion.a
               variants={itemUp}
-              href="/files/Resume___August_2025.pdf"
+              href="/files/Resume___August_2025 V4.pdf"
               className="block text-stone-400 text-lg md:text-xl hover:text-stone-200 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -268,6 +268,23 @@ export default function Home() {
                 </svg>
               </button>
 
+              {selectedRole === 'uw' && (
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-white/90 rounded-lg p-2 flex items-center justify-center">
+                      <Image src="/images/uw_logo.svg" alt="university of waterloo logo" width={40} height={40} className="w-full h-full object-contain" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium">university of waterloo — bachelor of computer science</h3>
+                      <p className="text-sm text-stone-400">sept 2024 - present</p>
+                    </div>
+                  </div>
+                  <p className="text-stone-300 text-sm md:text-base">
+                    writing a lot of programs, proofs, and essays.
+                  </p>
+                </div>
+              )}
+
               {selectedRole === 'shopify' && (
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
@@ -298,23 +315,6 @@ export default function Home() {
                   </div>
                   <p className="text-stone-300 text-sm md:text-base">
                     working on data quality and evaluation for language models on coding tasks.
-                  </p>
-                </div>
-              )}
-
-              {selectedRole === 'uw' && (
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-white/90 rounded-lg p-2 flex items-center justify-center">
-                      <Image src="/images/uw_logo.svg" alt="university of waterloo logo" width={40} height={40} className="w-full h-full object-contain" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-medium">university of waterloo — bachelor of computer science</h3>
-                      <p className="text-sm text-stone-400">sept 2024 - present</p>
-                    </div>
-                  </div>
-                  <p className="text-stone-300 text-sm md:text-base">
-                    writing a lot of programs, proofs, and essays.
                   </p>
                 </div>
               )}
