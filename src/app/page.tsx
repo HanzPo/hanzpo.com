@@ -84,31 +84,6 @@ export default function Home() {
             recent roles:
           </motion.h2>
 
-          <motion.div
-              variants={itemUp}
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              className="p-2 md:p-3 flex items-center justify-between rounded-xl border border-white/10 hover:border-white/20 transition-colors cursor-pointer backdrop-blur-[1px]"
-              onClick={() => setSelectedRole('uw')}
-            >
-              <div className="flex items-center">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
-                  <Image
-                    src="/images/uw_logo.svg"
-                    alt="university of waterloo logo"
-                    width={48}
-                    height={48}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div>
-                  <h3 className="font-medium text-sm md:text-base text-stone-200">university of waterloo</h3>
-                  <p className="text-stone-400 text-sm md:text-base">bachelor of computer science</p>
-                </div>
-              </div>
-              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - present</div>
-            </motion.div>
-
           <motion.div variants={listContainer} className="space-y-2 w-full md:w-[400px] lg:w-[500px] mx-auto md:mx-0 font-lora">
             {/* Work Experience Card 1 */}
             <motion.div
@@ -160,6 +135,31 @@ export default function Home() {
                 </div>
               </div>
               <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - aug 2025</div>
+            </motion.div>
+
+            <motion.div
+              variants={itemUp}
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              className="p-2 md:p-3 flex items-center justify-between rounded-xl border border-white/10 hover:border-white/20 transition-colors cursor-pointer backdrop-blur-[1px]"
+              onClick={() => setSelectedRole('uw')}
+            >
+              <div className="flex items-center">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-lg mr-2 md:mr-3 p-2 md:p-2.5 flex items-center justify-center">
+                  <Image
+                    src="/images/uw_logo.svg"
+                    alt="university of waterloo logo"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-medium text-sm md:text-base text-stone-200">university of waterloo</h3>
+                  <p className="text-stone-400 text-sm md:text-base">bachelor of computer science</p>
+                </div>
+              </div>
+              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - present</div>
             </motion.div>
           </motion.div>
 
