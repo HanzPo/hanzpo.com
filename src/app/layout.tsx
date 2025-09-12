@@ -15,13 +15,13 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hanzpo.com'),
-  title: "hanz po",
-  description: "i&apos;m a computer science student at the university of waterloo with an interest in building useful, scaleable, and beautiful software. i also enjoy learning about finance, urban planning, and languages in my spare time.",
+  title: "hey, i'm hanz",
+  description: "i'm a computer science student at the university of waterloo with an interest in building useful, scaleable, and beautiful software. i also enjoy learning about finance, urban planning, and languages in my spare time.",
   openGraph: {
-    title: "hanz po",
-    description: "i&apos;m a computer science student at the university of waterloo with an interest in building useful, scaleable, and beautiful software. i also enjoy learning about finance, urban planning, and languages in my spare time.",
+    title: "hey, i'm hanz",
+    description: "i'm a computer science student at the university of waterloo with an interest in building useful, scaleable, and beautiful software. i also enjoy learning about finance, urban planning, and languages in my spare time.",
     url: "https://hanzpo.com",
-    siteName: "hey, i&apos;m hanz",
+    siteName: "hanz po",
     images: "/opengraph-image",
     type: "website",
   },
