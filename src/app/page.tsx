@@ -163,13 +163,13 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          <a href="#next" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center group">
-            <motion.p variants={itemUp} className="text-stone-400 text-sm mb-2 group-hover:text-stone-200 transition-colors">
+          <a href="#next" className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 text-center group">
+            <motion.p variants={itemUp} className="text-stone-400 text-xs md:text-sm mb-1 group-hover:text-stone-200 transition-colors">
               <span className="md:hidden">swipe to see more</span>
               <span className="hidden md:inline">scroll to see more</span>
             </motion.p>
             <svg
-              className="w-6 h-6 mx-auto text-stone-400 group-hover:text-stone-200 transition-colors animate-bounce"
+              className="w-4 h-4 md:w-6 md:h-6 mx-auto text-stone-400 group-hover:text-stone-200 transition-colors animate-bounce"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
