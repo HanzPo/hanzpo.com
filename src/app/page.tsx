@@ -77,7 +77,7 @@ export default function Home() {
           </motion.h1>
 
           <motion.p variants={itemUp} className="text-lg md:text-xl font-crimson-pro mb-8 text-stone-300 text-center md:text-left max-w-lg">
-            i&apos;m a computer science student at the university of waterloo with an interest in machine learning. i also enjoy learning about finance, urban planning, and languages in my spare time.
+            i&apos;m a computer science student at the university of waterloo with an interest in building useful, scaleable, and beautiful software. i also enjoy learning about finance, urban planning, and languages in my spare time.
           </motion.p>
 
           <motion.h2 variants={itemUp} className="text-xl md:text-2xl font-crimson-pro mb-3 text-stone-200 text-center md:text-left">
