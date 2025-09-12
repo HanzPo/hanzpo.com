@@ -70,8 +70,8 @@ export default function Home() {
   return (
     <motion.div initial="hidden" animate="visible" variants={container}>
       <Image src="/opengraph-image.png" alt="site preview image" width={0} height={0} />
-      <div className="min-h-screen flex items-start md:items-center pt-12 md:pt-0">
-        <div className="w-full px-4 md:px-0 md:ml-[10%] lg:ml-[20%] mt-4 md:-mt-10">
+      <div className="min-h-screen flex items-start md:items-center pt-8 md:pt-0">
+        <div className="w-full px-4 md:px-0 md:ml-[10%] lg:ml-[20%] mt-0 md:-mt-10 pb-24 md:pb-0">
           <motion.h1 variants={itemUp} className="text-4xl md:text-5xl lg:text-6xl font-crimson-pro mb-4 text-center md:text-left">
             hey, i&apos;m hanz.
           </motion.h1>
