@@ -22,4 +22,3 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 - [Next.js](https://nextjs.org)
 - TypeScript
 - Tailwind CSS
-# blatex
