@@ -32,33 +32,39 @@ export default async function Image() {
 	const crimsonProData = await loadCrimsonPro();
 
 	return new ImageResponse(
-		(
-			<div
-				style={{
-					width: '100%',
-					height: '100%',
-					display: 'flex',
-					alignItems: 'center',
-					justifyContent: 'center',
-					backgroundColor,
-					backgroundImage: `linear-gradient(${gridLine} 1px, transparent 1px), linear-gradient(90deg, ${gridLine} 1px, transparent 1px)`,
-					backgroundSize: '20px 20px',
-					backgroundPosition: 'center center',
-				}}
-			>
-				<div
-					style={{
-						fontFamily: 'Crimson Pro, serif',
-						fontSize: 96,
-						color: '#E7E5E4',
-						letterSpacing: -1,
-						textAlign: 'center',
-					}}
+		(() => {
+			const verticalLines = Array.from({ length: Math.floor(size.width / 20) + 1 }, (_, i) => i * 20);
+			const horizontalLines = Array.from({ length: Math.floor(size.height / 20) + 1 }, (_, i) => i * 20);
+			return (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width={size.width}
+					height={size.height}
+					viewBox={`0 0 ${size.width} ${size.height}`}
 				>
-					hey, i&apos;m hanz
-				</div>
-			</div>
-		),
+					<rect width="100%" height="100%" fill={backgroundColor} />
+					<g stroke={gridLine} strokeWidth="1">
+						{verticalLines.map((x) => (
+							<line key={`v-${x}`} x1={x + 0.5} y1="0" x2={x + 0.5} y2={size.height} />
+						))}
+						{horizontalLines.map((y) => (
+							<line key={`h-${y}`} x1="0" y1={y + 0.5} x2={size.width} y2={y + 0.5} />
+						))}
+					</g>
+					<text
+						x={size.width / 2}
+						y={size.height / 2}
+						fill="#E7E5E4"
+						fontFamily="Crimson Pro, serif"
+						fontSize="96"
+						textAnchor="middle"
+						dominantBaseline="middle"
+					>
+						hey, i&apos;m hanz
+					</text>
+				</svg>
+			);
+		})(),
 		{
 			...size,
 			fonts: crimsonProData
