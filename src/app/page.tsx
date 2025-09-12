@@ -70,8 +70,8 @@ export default function Home() {
   return (
     <motion.div initial="hidden" animate="visible" variants={container}>
       <Image src="/opengraph-image.png" alt="site preview image" width={0} height={0} />
-      <div className="min-h-screen flex items-start md:items-center pt-16 md:pt-0">
-        <div className="w-full px-4 md:px-0 md:ml-[10%] lg:ml-[20%] mt-8 md:-mt-10">
+      <div className="min-h-screen flex items-start md:items-center pt-8 md:pt-0">
+        <div className="w-full px-4 md:px-0 md:ml-[10%] lg:ml-[20%] mt-0 md:-mt-10 pb-24 md:pb-0">
           <motion.h1 variants={itemUp} className="text-4xl md:text-5xl lg:text-6xl font-crimson-pro mb-4 text-center md:text-left">
             hey, i&apos;m hanz.
           </motion.h1>
@@ -163,13 +163,13 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          <a href="#next" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center group">
-            <motion.p variants={itemUp} className="text-stone-400 text-sm mb-2 group-hover:text-stone-200 transition-colors">
+          <a href="#next" className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 text-center group">
+            <motion.p variants={itemUp} className="text-stone-400 text-xs md:text-sm mb-1 group-hover:text-stone-200 transition-colors">
               <span className="md:hidden">swipe to see more</span>
               <span className="hidden md:inline">scroll to see more</span>
             </motion.p>
             <svg
-              className="w-6 h-6 mx-auto text-stone-400 group-hover:text-stone-200 transition-colors animate-bounce"
+              className="w-4 h-4 md:w-6 md:h-6 mx-auto text-stone-400 group-hover:text-stone-200 transition-colors animate-bounce"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
