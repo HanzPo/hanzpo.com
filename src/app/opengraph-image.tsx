@@ -9,49 +9,25 @@ export const size = {
 
 export const contentType = 'image/png';
 
-async function loadCrimsonPro(): Promise<ArrayBuffer | null> {
-	try {
-		const cssUrl = 'https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400&display=swap';
-		const css = await fetch(cssUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } });
-		if (!css.ok) return null;
-		const cssText = await css.text();
-		const match = cssText.match(/src: url\((https:\/\/fonts\.gstatic\.com\/[^)]+\.woff2)\)/);
-		if (!match) return null;
-		const fontUrl = match[1];
-		const res = await fetch(fontUrl);
-		if (!res.ok) return null;
-		return await res.arrayBuffer();
-	} catch {
-		return null;
-	}
-}
-
-async function loadInterFallback(): Promise<ArrayBuffer | null> {
-	try {
-		// Stable Inter font hosted by Vercel's OG playground
-		const res = await fetch('https://og-playground.vercel.app/inter-latin-ext.woff');
-		if (!res.ok) return null;
-		return await res.arrayBuffer();
-	} catch {
-		return null;
-	}
+async function loadGoogleFont (font: string, text: string) {
+  const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(text)}`
+  const css = await (await fetch(url)).text()
+  const resource = css.match(/src: url\((.+)\) format\('(opentype|truetype)'\)/)
+ 
+  if (resource) {
+    const response = await fetch(resource[1])
+    if (response.status == 200) {
+      return await response.arrayBuffer()
+    }
+  }
+ 
+  throw new Error('failed to load font data')
 }
 
 export default async function Image() {
 	const backgroundColor = '#221F18';
 	const gridLine = 'rgba(255,255,255,0.02)';
-	const crimsonProData = await loadCrimsonPro();
-
-	let fontData: ArrayBuffer | null = crimsonProData;
-	let fontName = 'Crimson Pro';
-	if (!fontData) {
-		fontData = await loadInterFallback();
-		fontName = 'Inter';
-	}
-
-	if (!fontData) {
-		throw new Error('Failed to load any font for OG image generation');
-	}
+	const text = 'hey, i\'m hanz';
 
 	return new ImageResponse(
 		(
@@ -66,27 +42,19 @@ export default async function Image() {
 					backgroundImage: `linear-gradient(${gridLine} 1px, transparent 1px), linear-gradient(90deg, ${gridLine} 1px, transparent 1px)`,
 					backgroundSize: '20px 20px',
 					backgroundPosition: 'center center',
+					fontSize: 128,
+					color: '#E5E7EB',
 				}}
 			>
-				<div
-					style={{
-						fontFamily: fontName,
-						fontSize: 96,
-						color: '#E7E5E4',
-						letterSpacing: -1,
-						textAlign: 'center',
-					}}
-				>
-					hey, i&apos;m hanz
-				</div>
+				{text}
 			</div>
 		),
 		{
 			...size,
 			fonts: [
 				{
-					name: fontName,
-					data: fontData,
+					name: 'Crimson Pro',
+					data: await loadGoogleFont('Crimson Pro', text),
 					style: 'normal',
 					weight: 400,
 				},
