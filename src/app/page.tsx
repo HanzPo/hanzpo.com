@@ -195,7 +195,7 @@ export default function Home() {
           <motion.div variants={listContainer} className="space-y-3 font-lora">
             <motion.a
               variants={itemUp}
-              href="/files/Resume___September_2025.pdf"
+              href="https://resume.hanzpo.com/resume.pdf"
               className="block text-stone-400 text-lg md:text-xl hover:text-stone-200 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
