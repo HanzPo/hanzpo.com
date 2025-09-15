@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://hanzpo.com'),
   title: "hey, i'm hanz",
   description: "i'm a computer science student at the university of waterloo with an interest in building useful, scaleable, and beautiful software. i also enjoy learning about finance, urban planning, and languages in my spare time.",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+  },
   openGraph: {
     title: "hey, i'm hanz",
     description: "i'm a computer science student at the university of waterloo with an interest in building useful, scaleable, and beautiful software. i also enjoy learning about finance, urban planning, and languages in my spare time.",
