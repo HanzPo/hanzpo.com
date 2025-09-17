@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion, type Variants, AnimatePresence } from 'framer-motion';
 import { useEffect, useState, useCallback } from 'react';
+import { Clock } from './components/clock';
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -75,6 +76,10 @@ export default function Home() {
           <motion.h1 variants={itemUp} className="text-4xl md:text-5xl lg:text-6xl font-crimson-pro mb-4 text-center md:text-left">
             hey, i&apos;m hanz.
           </motion.h1>
+
+          <motion.div variants={itemUp} className="mb-6 flex justify-center md:justify-start">
+            <Clock />
+          </motion.div>
 
           <motion.p variants={itemUp} className="text-lg md:text-xl font-crimson-pro mb-8 text-stone-300 text-center md:text-left max-w-lg">
             i&apos;m a computer science student at the university of waterloo with an interest in building useful, scaleable, and beautiful software. i also enjoy learning about finance, urban planning, and languages in my spare time.
