@@ -30,7 +30,7 @@ const itemUp: Variants = {
 };
 
 export default function Home() {
-  const [selectedRole, setSelectedRole] = useState<null | 'shopify' | 'cohere' | 'uw'>(null);
+  const [selectedRole, setSelectedRole] = useState<null | 'shopify' | 'cohere' | 'uw' | 'kalshi'>(null);
 
   const closeModal = useCallback(() => setSelectedRole(null), []);
 
@@ -81,10 +81,31 @@ export default function Home() {
           </motion.p>
 
           <motion.h2 variants={itemUp} className="text-xl md:text-2xl font-crimson-pro mb-3 text-stone-200 text-center md:text-left">
-            recent roles:
+            recently:
           </motion.h2>
 
           <motion.div variants={listContainer} className="space-y-2 w-full md:w-[400px] lg:w-[500px] mx-auto md:mx-0 font-lora">
+            
+            {/* Kalshi Card */}
+            <motion.div
+              variants={itemUp}
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              className="p-2 md:p-3 flex items-center justify-between rounded-xl border border-white/10 hover:border-white/20 transition-colors cursor-pointer backdrop-blur-[1px]"
+              onClick={() => setSelectedRole('kalshi')}
+            >
+              <div className="flex items-center">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg mr-2 md:mr-3 overflow-hidden">
+                  <Image src="/images/kalshi.png" alt="kalshi logo" width={48} height={48} className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 className="font-medium text-sm md:text-base text-stone-200">kalshi</h3>
+                  <p className="text-stone-400 text-sm md:text-base">software engineer intern</p>
+                </div>
+              </div>
+              <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">incoming jan 2026</div>
+            </motion.div>
+
             {/* Work Experience Card 1 */}
             <motion.div
               variants={itemUp}
@@ -137,7 +158,7 @@ export default function Home() {
               <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - aug 2025</div>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               variants={itemUp}
               whileHover={{ scale: 1.02 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
@@ -160,7 +181,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="hidden md:block text-stone-400 text-sm md:text-base whitespace-nowrap">sept 2024 - present</div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           <a href="#next" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center group">
@@ -268,6 +289,7 @@ export default function Home() {
                 </svg>
               </button>
 
+              {/*
               {selectedRole === 'uw' && (
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
@@ -281,6 +303,24 @@ export default function Home() {
                   </div>
                   <p className="text-stone-300 text-sm md:text-base">
                     writing a lot of programs, proofs, and essays.
+                  </p>
+                </div>
+              )}
+              */}
+
+            {selectedRole === 'kalshi' && (
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg overflow-hidden">
+                      <Image src="/images/kalshi.png" alt="kalshi logo" width={40} height={40} className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium">kalshi — software engineer intern</h3>
+                      <p className="text-sm text-stone-400">incoming jan 2026</p>
+                    </div>
+                  </div>
+                  <p className="text-stone-300 text-sm md:text-base">
+                    trade on anything
                   </p>
                 </div>
               )}
