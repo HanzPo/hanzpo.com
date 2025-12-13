@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hey, i'm hanz</title>
+  <meta name="description" content="i'm a computer science student at the university of waterloo with an interest in building useful, scaleable, and beautiful software. i also enjoy learning about finance, urban planning, and languages in my spare time.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="hey, i'm hanz">
+  <meta property="og:description" content="i'm a computer science student at the university of waterloo with an interest in building useful, scaleable, and beautiful software. i also enjoy learning about finance, urban planning, and languages in my spare time.">
+  <meta property="og:url" content="https://hanzpo.com">
+  <meta property="og:site_name" content="hanz po">
+  <meta property="og:image" content="https://hanzpo.com/opengraph-image.png">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://hanzpo.com/opengraph-image.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="background-image">
+  <!-- Hidden image for OG preview -->
+  <img src="/opengraph-image.png" alt="site preview image" width="0" height="0" style="display:none;">
+  
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title animate-item">hey, i'm hanz.</h1>
+      
+      <p class="hero-description animate-item">
+        i'm a computer science student at the university of waterloo with an interest in
+        building useful, elegant, and scalable software. i also enjoy learning about finance,
+        urban planning, and languages in my spare time.
+      </p>
+      
+      <h2 class="recently-title animate-item">recently:</h2>
+      
+      <div class="work-cards">
+        <!-- Kalshi -->
+        <div class="work-card animate-item" data-work="kalshi">
+          <div class="work-card-left">
+            <div class="work-logo">
+              <img src="/images/kalshi.png" alt="kalshi logo" class="logo-cover">
+            </div>
+            <div class="work-info">
+              <h3 class="work-company">kalshi</h3>
+              <p class="work-role">software engineer intern</p>
+            </div>
+          </div>
+          <div class="work-dates">incoming jan 2026</div>
+        </div>
+        
+        <!-- Shopify -->
+        <div class="work-card animate-item" data-work="shopify">
+          <div class="work-card-left">
+            <div class="work-logo white-bg">
+              <img src="/images/shopify_glyph.svg" alt="shopify logo" class="logo-contain">
+            </div>
+            <div class="work-info">
+              <h3 class="work-company">shopify</h3>
+              <p class="work-role">engineering intern</p>
+            </div>
+          </div>
+          <div class="work-dates">may 2025 - aug 2025</div>
+        </div>
+        
+        <!-- Cohere -->
+        <div class="work-card animate-item" data-work="cohere">
+          <div class="work-card-left">
+            <div class="work-logo white-bg">
+              <img src="/images/cohere_logo.svg" alt="cohere logo" class="logo-contain">
+            </div>
+            <div class="work-info">
+              <h3 class="work-company">cohere</h3>
+              <p class="work-role">senior data quality specialist</p>
+            </div>
+          </div>
+          <div class="work-dates">sept 2024 - aug 2025</div>
+        </div>
+      </div>
+      
+      <a href="#next" class="scroll-indicator animate-item">
+        <p class="scroll-text">
+          <span class="mobile-only">swipe to see more</span>
+          <span class="desktop-only">scroll to see more</span>
+        </p>
+        <svg class="scroll-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Social Links Section -->
+  <div id="next" class="social-section">
+    <div class="social-content">
+      <h2 class="social-title animate-item">find me here:</h2>
+      <div class="social-links">
+        <a href="https://resume.hanzpo.com/resume.pdf" class="social-link animate-item" target="_blank" rel="noopener noreferrer">resume</a>
+        <a href="https://www.github.com/HanzPo" class="social-link animate-item" target="_blank" rel="noopener noreferrer">github</a>
+        <a href="https://www.linkedin.com/in/hanznathanpo/" class="social-link animate-item" target="_blank" rel="noopener noreferrer">linkedin</a>
+        <a href="https://x.com/hanznathanpo" class="social-link animate-item" target="_blank" rel="noopener noreferrer">twitter</a>
+        <a href="https://www.instagram.com/hanznathanpo" class="social-link animate-item" target="_blank" rel="noopener noreferrer">instagram</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Experience Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="modal-header">
+        <div class="modal-logo" id="modal-logo">
+          <img id="modal-logo-img" src="" alt="">
+        </div>
+        <div class="modal-info">
+          <h3 id="modal-title"></h3>
+          <p id="modal-dates"></p>
+        </div>
+      </div>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="webring">
+      <a href="https://cs.uwatering.com/#https://hanzpo.com?nav=prev" aria-label="Previous site in CS Webring">←</a>
+      <a href="https://cs.uwatering.com/#https://hanzpo.com" target="_blank" rel="noopener noreferrer" aria-label="CS Webring">
+        <img src="https://cs.uwatering.com/icon.white.svg" alt="CS Webring" width="24" height="24">
+      </a>
+      <a href="https://cs.uwatering.com/#https://hanzpo.com?nav=next" aria-label="Next site in CS Webring">→</a>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
