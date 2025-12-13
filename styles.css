@@ -507,16 +507,10 @@ body {
   }
 }
 
-/* Footer */
-.footer {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-}
-
 .webring {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -570,4 +564,5 @@ body {
 .social-links .animate-item:nth-child(3) { transition-delay: 0.36s; }
 .social-links .animate-item:nth-child(4) { transition-delay: 0.44s; }
 .social-links .animate-item:nth-child(5) { transition-delay: 0.52s; }
+.social-links .animate-item:nth-child(6) { transition-delay: 0.60s; }
 
